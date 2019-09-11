@@ -1,0 +1,58 @@
+﻿<Window x:Class="Tabs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tabs"
+        mc:Ignorable="d"
+        Title="Tabs" Height="350.983" Width="653" Closing="MainCLosing">
+    <Grid>
+
+
+        <TabControl>
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="MinWidth" Value="150"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </TabControl.Resources>
+            <TabItem Header="OverView" IsSelected="True">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="184*"/>
+                        <ColumnDefinition Width="455*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Balance_Label" Content="Balance : 1700 TND" HorizontalAlignment="Right" VerticalAlignment="Top" Width="336" FontSize="24" Margin="0,10,141,0" Height="42" Grid.ColumnSpan="2"/>
+                    <Label Content="Ajouter au balance" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="42,56,0,0" Width="109" Height="38" />
+                    <TextBox x:Name="Salary_TextBox" TextDecorations="{x:Null}" FontSize="16" Margin="0,56,277,0" HorizontalAlignment="Right" Width="166" Height="24" VerticalAlignment="Top" Grid.Column="1"  />
+                    <Button x:Name="DisplayList_Btn" Content="Afficher" Margin="0,0,337,138" Click="DisplayList_Btn_Click" HorizontalAlignment="Right" Width="106" Height="24" VerticalAlignment="Bottom" Grid.Column="1" />
+                    <Label Content="Afficher Historique" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="42,0,0,125" Width="109" Height="37" />
+                    <Button x:Name="Salary_Btn" Content="Ajouter" Margin="218,57,0,0" Grid.Column="1" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="106" Click="Salary_Btn_Click" />
+                    <Label x:Name="FoodCount_Label" Content="Food: TND" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="21,0,0,51" Width="109" Height="37" />
+                    <Label x:Name="UtilitiesCount_Label" Content="Utilities: TND" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="162,0,0,51" Width="109" Height="37" Grid.ColumnSpan="2" />
+                    <Label x:Name="ClothesCount_Label" Content="CLothes: TND" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="146,0,0,51" Width="109" Height="37" Grid.Column="1" />
+                    <Label x:Name="MiscCount_Label" Content="Misc.: TND" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="308,0,0,51" Width="109" Height="37" Grid.Column="1" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Purchaces">
+                <Grid>
+                    <Label Content="Nom Item" HorizontalAlignment="Left" Margin="60,73,0,0" VerticalAlignment="Top" Height="23"/>
+                    <TextBox x:Name="ItemName_TextBox" HorizontalAlignment="Left" Height="24" Margin="134,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+                    <Label Content="Prix Item" HorizontalAlignment="Left" Margin="375,73,0,0" VerticalAlignment="Top" Height="23"/>
+                    <TextBox x:Name="ItemPrice_TextBox" HorizontalAlignment="Left" Height="23" Margin="444,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99"/>
+                    <Label Content="TND" HorizontalAlignment="Left" Margin="548,73,0,0" VerticalAlignment="Top" Width="37" Height="23"/>
+                    <Button x:Name="Pay_Btn" Content="Payer" HorizontalAlignment="Left" Margin="399,160,0,0" VerticalAlignment="Top" Width="144" Click="Pay_Btn_Click"/>
+                    <Label Content="Categorie" HorizontalAlignment="Left" Margin="60,154,0,0" VerticalAlignment="Top" Height="26"/>
+                    <ComboBox  Height="25" Margin="134,154,0,0" x:Name="Categories_CB" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left">
+
+                    </ComboBox>
+                    <Label Content="Ajouter un nouveau item" HorizontalAlignment="Left" Margin="225,20,0,0" VerticalAlignment="Top" Height="35" FontSize="16"/>
+                </Grid>
+            </TabItem>
+
+
+
+        </TabControl>
+    </Grid>
+</Window>
