@@ -10,4 +10,4 @@ some parts are in french because the person I wanted to show it to doesnt speak 
 ![image](https://user-images.githubusercontent.com/47365313/117480059-0245a180-af59-11eb-8425-31d704c1608c.png)
 
 
-[this is using Sqlite for database](../blob/master/), using Dapper library to make my own helper file instead of an ORM
+[this is using Sqlite for database](../blob/master/Tabs/Tabs/SQLiteDataAccess.cs), using Dapper library to make my own helper file instead of an ORM
